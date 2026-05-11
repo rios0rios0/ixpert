@@ -86,7 +86,7 @@ ixpert/
 │   └── copilot-instructions.md   # This file
 ├── Build/
 │   ├── iXpert.app/               # Pre-built application bundle (historical artifact)
-│   └── iXpert.ipa/               # Pre-built IPA (historical artifact)
+│   └── iXpert.ipa                # Pre-built IPA (historical artifact)
 ├── Imgs/
 │   ├── AccessoryView/            # Keyboard accessory bar background
 │   ├── Backgrounds/              # Per-mode background images (Hex, Bin, Oct, B64, MD5, …)
@@ -106,6 +106,7 @@ ixpert/
 │       ├── main.m
 │       ├── *.xib                        # Interface Builder layout files
 │       └── *.png                        # Runtime image assets
+├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
