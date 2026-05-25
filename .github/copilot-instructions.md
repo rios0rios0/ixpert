@@ -89,9 +89,8 @@ ixpert/
 │   └── iXpert.ipa                # Pre-built IPA (historical artifact)
 ├── Imgs/
 │   ├── AccessoryView/            # Keyboard accessory bar background
-│   ├── Backgrounds/              # Per-mode background images (Hex, Bin, Oct, B64, MD5, …)
+│   ├── Backgrounds/              # Per-mode background images + splash screens (Default.png)
 │   ├── Buttons/                  # Normal/selected states for all mode buttons + navigation
-│   ├── Default/                  # Splash screen images
 │   └── Icons/                    # App icons in multiple sizes + PSD sources
 ├── Project/
 │   ├── iXpert.xcodeproj/         # Xcode project file
