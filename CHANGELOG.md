@@ -16,6 +16,10 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+### Changed
+
+- refreshed `.github/copilot-instructions.md` to remove non-existent `Imgs/Default/` directory from repository structure
+
 ## [0.1.1] - 2026-05-19
 
 ### Changed
