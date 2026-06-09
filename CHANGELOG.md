@@ -16,6 +16,8 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-06-09
+
 ### Added
 
 - created `CLAUDE.md` to document the MRC (non-ARC) convention, manual view-switching architecture, and the absence of build/test/CI commands for Claude Code sessions
