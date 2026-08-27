@@ -125,7 +125,7 @@ ixpert/
 
 ## CI/CD
 
-This project has **no CI/CD pipeline**. There are no GitHub Actions workflows, automated tests, linters, or deployment scripts. The repository is a historical archive.
+This project has **no build, test or deployment pipeline** -- no automated tests, linters, or deployment scripts. The only workflows are `.github/workflows/claude-review.yaml` and `.github/workflows/claude-mention.yaml`, which call the shared Claude reusable workflows in `rios0rios0/pipelines` and need the `CLAUDE_CODE_OAUTH_TOKEN` secret. The repository is a historical archive.
 
 ## Development Notes
 
