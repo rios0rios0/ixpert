@@ -11,7 +11,7 @@ iXpert is a **discontinued (2012-03-09) iOS app** for encoding/decoding computat
 
 ## Build / test / lint
 
-- There are **no build, test, lint, or CI commands** — all work was done in Xcode. No GitHub Actions, no test suite (the project predates XCTest).
+- There are **no build, test, lint, or deployment commands** — all work was done in Xcode, and there is no test suite (the project predates XCTest). The only CI is two GitHub Actions workflows, `.github/workflows/claude-review.yaml` and `claude-mention.yaml`, which call the shared Claude reusable workflows in `rios0rios0/pipelines` (secret `CLAUDE_CODE_OAUTH_TOKEN`); neither builds the app.
 - Open in Xcode (originally 4.x): `open Project/iXpert.xcodeproj`, select an iPhone Simulator target, `Cmd+R`.
 
 ## Architecture
