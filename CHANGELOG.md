@@ -22,6 +22,12 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-09-01
+
+### Changed
+
+- refreshed `CLAUDE.md` to correct the stale "No GitHub Actions" claim, documenting the `claude-review.yaml` and `claude-mention.yaml` assistant workflows that now exist
+
 ## [0.4.0] - 2026-08-28
 
 ### Added
