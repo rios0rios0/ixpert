@@ -1,3 +1,0 @@
-kind: 'Changed'
-body: 'rewrote the secret-hygiene bullet in `.github/skills/code-review/SKILL.md` to use truncated vendor prefixes that the gitleaks scanner does not match'
-time: '2026-09-07T07:12:44.512930411Z'
