@@ -1,0 +1,3 @@
+kind: 'Changed'
+body: 'refreshed `AGENTS.md`, `.github/copilot-instructions.md`, the `code-review` skill and `README.md` to drop stray tool-call markup, document the `checks` workflow, correct the how-to curl transition to option ↔ how-to, point reviewers at `AGENTS.md` instead of `CLAUDE.md`, and replace the nonexistent `Imgs/Default/` folder'
+time: '2026-10-29T00:09:01.549306354Z'

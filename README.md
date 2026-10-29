@@ -57,9 +57,8 @@ ixpert/
 │   └── iXpert.app/                      # Pre-built application bundle with all assets
 ├── Imgs/
 │   ├── AccessoryView/                   # Keyboard accessory bar background
-│   ├── Backgrounds/                     # Per-mode background images (Hex, Bin, Oct, B64, MD5, etc.)
+│   ├── Backgrounds/                     # Per-mode background images (Hex, Bin, Oct, B64, MD5, etc.) + splash screens (Default.png)
 │   ├── Buttons/                         # Normal/selected states for all mode buttons + navigation
-│   ├── Default/                         # Splash screen images
 │   └── Icons/                           # App icons in multiple sizes + PSD sources
 ├── Project/
 │   ├── iXpert.xcodeproj/
