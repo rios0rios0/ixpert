@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents (Claude Code, Codex, Cursor, GitHub Copilot) when working with code in this repository.
 
 iXpert is a **discontinued (2012-03-09) iOS app** for encoding/decoding computational data formats, written in Objective-C. The repository is preserved as a historical reference — no new features or fixes are planned.
 
@@ -11,7 +11,7 @@ iXpert is a **discontinued (2012-03-09) iOS app** for encoding/decoding computat
 
 ## Build / test / lint
 
-- There are **no build, test, lint, or deployment commands** — all work was done in Xcode, and there is no test suite (the project predates XCTest). The only CI is two GitHub Actions workflows, `.github/workflows/claude-review.yaml` and `claude-mention.yaml`, which call the shared Claude reusable workflows in `rios0rios0/pipelines` (secret `CLAUDE_CODE_OAUTH_TOKEN`); neither builds the app.
+- There are **no build, test, lint, or deployment commands** — all work was done in Xcode, and there is no test suite (the project predates XCTest). CI is three GitHub Actions workflows calling shared reusable workflows in `rios0rios0/pipelines`, none of which builds the app: `.github/workflows/checks.yaml` runs the shared `checks` gate (rebase status and the changelog-fragment rule) on pull requests to `main`, and `claude-review.yaml` / `claude-mention.yaml` run the Claude assistants (secret `CLAUDE_CODE_OAUTH_TOKEN`).
 - Open in Xcode (originally 4.x): `open Project/iXpert.xcodeproj`, select an iPhone Simulator target, `Cmd+R`.
 
 ## Architecture
@@ -27,8 +27,6 @@ iXpert is a **discontinued (2012-03-09) iOS app** for encoding/decoding computat
 - UI is built in Interface Builder `.xib` files; image assets are bundled as PNGs in `Project/iXpert/`, with higher-res sources in `Imgs/`.
 - `Build/iXpert.app` and `Build/iXpert.ipa` are committed as historical artifacts.
 - `.github/copilot-instructions.md` covers the same ground in more detail (mode tables, full file map, tech stack); consult it before broad searches.
-</content>
-</invoke>
 
 <!-- chlog:start -->
 ## Changelog (chlog) — MANDATORY

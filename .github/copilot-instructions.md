@@ -16,7 +16,7 @@ open Project/iXpert.xcodeproj
 # Then: select an iPhone Simulator target and press Cmd+R
 ```
 
-> **Note:** There are no automated build, test, lint, or CI/CD commands. All development was done entirely within Xcode.
+> **Note:** There are no automated build, test, or lint commands, and CI never builds the app (see [CI/CD](#cicd)). All development was done entirely within Xcode.
 
 ## Working Effectively
 
@@ -51,7 +51,7 @@ Utility classes:
 
 ### View Transition Animations
 - Option ↔ Detail: `UIViewAnimationTransitionFlipFromRight/Left`
-- Detail ↔ How-to: `UIViewAnimationTransitionCurlDown/Up`
+- Option ↔ How-to: `UIViewAnimationTransitionCurlDown/Up`
 
 ### Conversion Modes
 
@@ -82,8 +82,12 @@ Utility classes:
 
 ```
 ixpert/
+├── .changes/
+│   └── unreleased/               # chlog fragments (CHANGELOG.md is generated from these)
 ├── .github/
-│   └── copilot-instructions.md   # This file
+│   ├── copilot-instructions.md   # This file
+│   ├── skills/code-review/       # Code-review skill
+│   └── workflows/                # checks, claude-review, claude-mention
 ├── Build/
 │   ├── iXpert.app/               # Pre-built application bundle (historical artifact)
 │   └── iXpert.ipa                # Pre-built IPA (historical artifact)
@@ -106,7 +110,9 @@ ixpert/
 │       ├── *.xib                        # Interface Builder layout files
 │       └── *.png                        # Runtime image assets
 ├── .gitignore
+├── AGENTS.md                     # Shared agent instructions
 ├── CHANGELOG.md
+├── CLAUDE.md                     # Imports AGENTS.md only
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
@@ -125,7 +131,7 @@ ixpert/
 
 ## CI/CD
 
-This project has **no build, test or deployment pipeline** -- no automated tests, linters, or deployment scripts. The only workflows are `.github/workflows/claude-review.yaml` and `.github/workflows/claude-mention.yaml`, which call the shared Claude reusable workflows in `rios0rios0/pipelines` and need the `CLAUDE_CODE_OAUTH_TOKEN` secret. The repository is a historical archive.
+This project has **no build, test or deployment pipeline** -- no automated tests, linters, or deployment scripts. Three workflows call shared reusable workflows in `rios0rios0/pipelines`: `.github/workflows/checks.yaml` runs the `checks` gate (rebase status and the changelog-fragment rule) on pull requests to `main`, and `.github/workflows/claude-review.yaml` and `.github/workflows/claude-mention.yaml` run the Claude assistants with the `CLAUDE_CODE_OAUTH_TOKEN` secret. The repository is a historical archive.
 
 ## Development Notes
 

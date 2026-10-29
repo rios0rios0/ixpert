@@ -20,7 +20,7 @@ The canonical engineering standards live in the
 repo-tailored index into that guide plus the rules that only apply here. Precedence, highest
 first:
 
-1. This repository's `.github/copilot-instructions.md`, `CLAUDE.md`, and `CONTRIBUTING.md` —
+1. This repository's `.github/copilot-instructions.md`, `AGENTS.md`, and `CONTRIBUTING.md` —
    they describe *this* codebase and its load-bearing invariants.
 2. The **rios0rios0/guide** wiki — the shared standard.
 3. General language idiom.
@@ -66,7 +66,7 @@ them before the generic ones.
 - **Input validation lives in `DetailViewController`.** A mode that accepts input its converter cannot handle produces a silent wrong answer — the worst failure mode for a converter.
 - **MD5 is a hash, not encryption.** Any documentation or UI text that implies it is reversible or secure should be corrected; do not add it as a security feature.
 - **Manual reference counting, everywhere.** Balance every `retain` with a `release` in `dealloc`; no ARC, no blocks, no modern literals. **Critical** when unbalanced.
-- **The view-transition structure is deliberate**: Option ↔ Detail uses `UIViewAnimationTransitionFlipFromRight/Left`, Detail ↔ How-to uses `CurlDown/Up`. A new view must fit that model rather than introducing a navigation controller.
+- **The view-transition structure is deliberate**: Option ↔ Detail uses `UIViewAnimationTransitionFlipFromRight/Left`, Option ↔ How-to uses `CurlDown/Up`. A new view must fit that model rather than introducing a navigation controller.
 - **Adding a mode touches several places at once** — the option button and its normal/selected images, the mode's background, the converter method, and the validation. A partial addition leaves a button that does nothing.
 - **Treat this as an archive** — no ARC migration, no Swift, no Storyboards, no auto-layout, no reformatting.
 
@@ -99,8 +99,9 @@ hand.
 - Fragment bodies start with a lowercase verb in simple past tense, capitalise proper nouns
   (GitHub, Go, Docker), and wrap code identifiers and versions in backticks.
 - `README.md` is updated whenever usage, setup, configuration, or architecture changes;
-  `.github/copilot-instructions.md` and `CLAUDE.md` whenever the workflow, commands, or
-  structure changes. Documentation and code ship in one commit.
+  `.github/copilot-instructions.md` and `AGENTS.md` whenever the workflow, commands, or
+  structure changes (`CLAUDE.md` holds only the `@AGENTS.md` import). Documentation and
+  code ship in one commit.
 
 ## Git Flow and pull-request hygiene
 
@@ -166,7 +167,7 @@ A review that raises noise gets ignored. Do not report these:
 ### Change-control checklist
 - [ ] Changelog entry present for every behavioural change
 - [ ] `README.md` updated if usage, setup, or architecture changed
-- [ ] `.github/copilot-instructions.md` and `CLAUDE.md` updated if the workflow, commands, or structure changed
+- [ ] `.github/copilot-instructions.md` and `AGENTS.md` updated if the workflow, commands, or structure changed
 - [ ] Commit messages follow `type(SCOPE): message` in simple past tense
 - [ ] Breaking changes flagged in the commit footer, the changelog, and the PR description
 
