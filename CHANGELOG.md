@@ -22,6 +22,13 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [0.5.2] - 2026-11-04
+
+### Changed
+
+- moved the agent instructions from `CLAUDE.md` to `AGENTS.md`, keeping a `CLAUDE.md` that imports it
+- refreshed `AGENTS.md`, `.github/copilot-instructions.md`, the `code-review` skill and `README.md` to drop stray tool-call markup, document the `checks` workflow, correct the how-to curl transition to option ↔ how-to, point reviewers at `AGENTS.md` instead of `CLAUDE.md`, and replace the nonexistent `Imgs/Default/` folder
+
 ## [0.5.1] - 2026-09-08
 
 ### Changed
